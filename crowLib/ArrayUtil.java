@@ -329,4 +329,25 @@ public class ArrayUtil{
         }
         return false;
     }
+	//Int array sorting method using Bubble sort
+	public int[] arraySort(int[] array){
+        int n = array.length;
+        int temp;
+        boolean swapped;
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+            for (int j = 0; j < n - i - 1; j++) {
+                if (array[j] > array[j+1]) {
+                    temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                    swapped = true;
+                }
+            }
+            if (swapped == false) {
+                break;
+            }
+        }
+        return array;
+    }
 }
