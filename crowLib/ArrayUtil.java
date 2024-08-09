@@ -350,4 +350,173 @@ public class ArrayUtil{
         }
         return array;
     }
+	//Long array sorting method using Bubble sort
+	public long[] arraySort(long[] array){
+        int n = array.length;
+        long temp;
+        boolean swapped;
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+            for (int j = 0; j < n - i - 1; j++) {
+                if (array[j] > array[j+1]) {
+                    temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                    swapped = true;
+                }
+            }
+            if (swapped == false) {
+                break;
+            }
+        }
+        return array;
+    }
+	//Short array sorting method using Bubble sort
+	public short[] arraySort(short[] array){
+        int n = array.length;
+        short temp;
+        boolean swapped;
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+            for (int j = 0; j < n - i - 1; j++) {
+                if (array[j] > array[j+1]) {
+                    temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                    swapped = true;
+                }
+            }
+            if (swapped == false) {
+                break;
+            }
+        }
+        return array;
+    }
+	//Byte array sorting method using Bubble sort
+	public byte[] arraySort(byte[] array){
+        int n = array.length;
+        byte temp;
+        boolean swapped;
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+            for (int j = 0; j < n - i - 1; j++) {
+                if (array[j] > array[j+1]) {
+                    temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                    swapped = true;
+                }
+            }
+            if (swapped == false) {
+                break;
+            }
+        }
+        return array;
+    }	
+	//Float array sorting method using Bubble sort
+	public float[] arraySort(float[] array){
+        int n = array.length;
+        float temp;
+        boolean swapped;
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+            for (int j = 0; j < n - i - 1; j++) {
+                if (array[j] > array[j+1]) {
+                    temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                    swapped = true;
+                }
+            }
+            if (swapped == false) {
+                break;
+            }
+        }
+        return array;
+    }	
+	//Double array sorting method using Bubble sort
+	public double[] arraySort(double[] array){
+        int n = array.length;
+        double temp;
+        boolean swapped;
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+            for (int j = 0; j < n - i - 1; j++) {
+                if (array[j] > array[j+1]) {
+                    temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+                    swapped = true;
+                }
+            }
+            if (swapped == false) {
+                break;
+            }
+        }
+        return array;
+    }	
+	//String array sorting method using Bubble sort
+	public String[] arraySort(String[] array){
+
+		int[] firstLetters= new int[array.length];
+
+		for (int i = 0; i < array.length; i++) {
+			firstLetters[i] = array[i].toCharArray()[0];
+		}
+
+        int n = array.length;
+        String temp;
+		int letterTemp;
+        boolean swapped;
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+            for (int j = 0; j < n - i - 1; j++) {
+                if (firstLetters[j] > firstLetters[j+1]) {
+                    temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+					letterTemp = firstLetters[j];
+                    firstLetters[j] = firstLetters[j+1];
+                    firstLetters[j+1] = letterTemp;
+                    swapped = true;
+                }
+            }
+            if (swapped == false) {
+                break;
+            }
+        }
+        return array;
+    }	
+	//Character array sorting method using Bubble sort
+	public char[] arraySort(char[] array){
+
+		int[] firstLetters= new int[array.length];
+
+		for (int i = 0; i < array.length; i++) {
+			firstLetters[i] = (int) array[i];
+		}
+
+        int n = array.length;
+        char temp;
+		int letterTemp;
+        boolean swapped;
+        for (int i = 0; i < n - 1; i++) {
+            swapped = false;
+            for (int j = 0; j < n - i - 1; j++) {
+                if (firstLetters[j] > firstLetters[j+1]) {
+                    temp = array[j];
+                    array[j] = array[j+1];
+                    array[j+1] = temp;
+					letterTemp = firstLetters[j];
+                    firstLetters[j] = firstLetters[j+1];
+                    firstLetters[j+1] = letterTemp;
+                    swapped = true;
+                }
+            }
+            if (swapped == false) {
+                break;
+            }
+        }
+        return array;
+    }
 }
