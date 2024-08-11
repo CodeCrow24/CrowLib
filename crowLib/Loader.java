@@ -9,6 +9,8 @@ public class Loader{
     String mainType = "";//visuals of loader
     int spinnerState = 0;//visual position of spinner
     String secondaryType = "spinner";//visuals of Spinner
+    String customFull = "▓";
+    String customEmpty = "»";
 
 
     //class constructor
@@ -30,6 +32,7 @@ public class Loader{
                     case "dot" -> System.out.print("|");
                     case "bar" -> System.out.print("█");
                     case "line" -> System.out.print("═");
+                    case "custom" -> System.out.print(customFull);
                     default -> System.out.print("▓");
                 }
             }
@@ -40,6 +43,7 @@ public class Loader{
                     case "dot" -> System.out.print(".");
                     case "bar" -> System.out.print("░");
                     case "line" -> System.out.print("-");
+                    case "custom" -> System.out.print(customEmpty);
                     default -> System.out.print("»");
                 }
             }
@@ -118,6 +122,10 @@ public class Loader{
 
     public void setSpinnerType(String type){
         secondaryType = type;
+    }
+    public void setCustom(String typeEmpty, String typeFull){
+        customEmpty = typeEmpty;
+        customFull = typeFull;
     }
 
 }
